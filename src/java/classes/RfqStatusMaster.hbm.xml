@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.RfqStatusMaster" table="rfq_status_master" catalog="srfq">
+        <id name="rfqStatusId" type="string">
+            <column name="RFQ_Status_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="rfqStatusRemark" type="string">
+            <column name="RFQ_Status_Remark" length="45" not-null="true" />
+        </property>
+        <property name="rfqStatus" type="string">
+            <column name="RFQ_Status" length="20" not-null="true" />
+        </property>
+        <property name="weightage" type="string">
+            <column name="Weightage" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

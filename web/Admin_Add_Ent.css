@@ -1,0 +1,38 @@
+/*body{
+    background-image: url(bg.jpg);
+}*/
+#heading_econf{
+    background-image:url(bg_menu.jpg);
+    text-indent: 10%;
+    color:whitesmoke;
+}
+
+#admtab{
+    border-bottom-style: solid;
+    border-color: #003366;
+     background-color:whitesmoke;
+     font-family: 'arial';
+}
+#homelink_ec{
+    text-indent: 18%;
+}
+.tbx{
+    border:none;
+    width:150px;
+    height:20px;
+}
+select{
+    width:160px;
+    height:25px;
+}
+#sbt{
+    font-family: 'arial';
+    font-weight:bold;
+    width:100px;
+    height: 35px;
+}
+td textarea{
+     border:none;
+    width:150px;
+    height:20px;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.ResourceMaster" table="resource_master" catalog="srfq">
+        <id name="rescId" type="string">
+            <column name="Resc_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="gorupEnglish" type="string">
+            <column name="Gorup_English" length="45" not-null="true" />
+        </property>
+        <property name="rescNameEnglish" type="string">
+            <column name="Resc_Name_English" length="45" not-null="true" />
+        </property>
+        <property name="link" type="string">
+            <column name="Link" length="45" not-null="true" />
+        </property>
+        <property name="showInMenu" type="string">
+            <column name="Show_in_menu" length="45" not-null="true" />
+        </property>
+        <set name="userMasters" inverse="true" table="user_resource_map">
+            <key>
+                <column name="Resc_id" length="10" not-null="true" />
+            </key>
+            <many-to-many entity-name="classes.UserMaster">
+                <column name="User_id" length="10" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="roleResourceMaps" inverse="true">
+            <key>
+                <column name="Resc_id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.RoleResourceMap" />
+        </set>
+    </class>
+</hibernate-mapping>

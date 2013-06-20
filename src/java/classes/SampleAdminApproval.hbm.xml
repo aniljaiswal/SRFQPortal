@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.SampleAdminApproval" table="sample_admin_approval" catalog="srfq">
+        <id name="sampleAdminApprovalId" type="string">
+            <column name="Sample_Admin_Approval_Id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="supplierQuatationMaster" class="classes.SupplierQuatationMaster" fetch="select">
+            <column name="Supp_Quatation_Id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="sampleAdminApproved" type="string">
+            <column name="Sample_Admin_Approved" length="4" not-null="true" />
+        </property>
+        <property name="feedback" type="string">
+            <column name="Feedback" length="45" not-null="true" />
+        </property>
+        <property name="sampleAdminApprovedBy" type="string">
+            <column name="Sample_Admin_Approved_By" length="10" not-null="true" />
+        </property>
+        <property name="dateOn" type="date">
+            <column name="Date_on" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

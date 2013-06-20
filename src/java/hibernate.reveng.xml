@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd">
+<hibernate-reverse-engineering>
+  <schema-selection match-catalog="srfq"/>
+  <table-filter match-name="supplier_goodwill_master"/>
+  <table-filter match-name="sample_requisition_acceptance"/>
+  <table-filter match-name="material_master"/>
+  <table-filter match-name="supplier_quatation_master"/>
+  <table-filter match-name="quotation_analysis_initiation"/>
+  <table-filter match-name="sample_requisition_acceptance_details"/>
+  <table-filter match-name="financial_feedback_master"/>
+  <table-filter match-name="employee"/>
+  <table-filter match-name="employee_master"/>
+  <table-filter match-name="rating_master"/>
+  <table-filter match-name="requirement_priority_master"/>
+  <table-filter match-name="financial_goodwill_master"/>
+  <table-filter match-name="requirement_master"/>
+  <table-filter match-name="technical_feedback_master"/>
+  <table-filter match-name="resource_master"/>
+  <table-filter match-name="sample_production_approval"/>
+  <table-filter match-name="employee_role_map"/>
+  <table-filter match-name="sample_financial_approval"/>
+  <table-filter match-name="role_resource_map"/>
+  <table-filter match-name="currency_master"/>
+  <table-filter match-name="sample_admin_approval"/>
+  <table-filter match-name="role_master"/>
+  <table-filter match-name="supplier_contact_master"/>
+  <table-filter match-name="sample_demand_specfication"/>
+  <table-filter match-name="status_master"/>
+  <table-filter match-name="sample_tech_approval"/>
+  <table-filter match-name="rfq_status_master"/>
+  <table-filter match-name="sample_admin_request"/>
+  <table-filter match-name="salutaion_master"/>
+  <table-filter match-name="user_resource_map"/>
+  <table-filter match-name="supplier_status_master"/>
+  <table-filter match-name="requirement_analysis_initiation"/>
+  <table-filter match-name="user_master"/>
+  <table-filter match-name="supplier_history"/>
+  <table-filter match-name="material_group_master"/>
+  <table-filter match-name="material_tech_goodwill_master"/>
+  <table-filter match-name="unit_measure_master"/>
+  <table-filter match-name="supplier_master"/>
+  <table-filter match-name="organization_master"/>
+</hibernate-reverse-engineering>

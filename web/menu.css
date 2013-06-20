@@ -1,0 +1,54 @@
+#menubody{
+    border-bottom-style:solid;
+    border-top-style: solid;
+    border-color:#666666;
+    border-width:10px;
+}
+.mtab
+{
+text-indent:4%;
+vertical-align:middle;
+/*background-color:#006666;*/
+background-image: url(bg_menu.jpg);
+/*border-style:solid;
+border-color:#006666;*/
+color:white;
+font-family:'arial';
+font-weight: bold;
+}
+.mtab:visited
+{
+color:inherit;
+}
+a:hover
+{
+color:#999999;
+}
+.sublist .stab{
+    display:none;
+}
+.mainlist:hover .sublist .stab{
+    display:block;
+}
+.mainlist:hover .submenutab{
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+
+.stab{
+    color:whitesmoke;
+    background-color:#666666;
+    border-style:solid;
+    border-color:#666666;
+    font-family: 'arial';
+    text-indent: 4%;
+    font-weight: bold;
+    vertical-align: middle;
+    font-size: 13px;
+}
+.stab:hover{
+    color:black;
+    background-color:#cccccc;
+    border-style:solid;
+    border-color:#cccccc;
+}

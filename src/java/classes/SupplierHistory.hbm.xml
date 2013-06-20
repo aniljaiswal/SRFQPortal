@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.SupplierHistory" table="supplier_history" catalog="srfq">
+        <id name="suppHid" type="string">
+            <column name="supp_hid" length="35" />
+            <generator class="assigned" />
+        </id>
+        <property name="suppName" type="string">
+            <column name="supp_name" length="45" not-null="true" />
+        </property>
+        <property name="contactPersonFname" type="string">
+            <column name="contact_person_fname" length="45" not-null="true" />
+        </property>
+        <property name="contactPersonLname" type="string">
+            <column name="contact_person_lname" length="45" not-null="true" />
+        </property>
+        <property name="contactPersonFunction" type="string">
+            <column name="contact_person_function" length="45" not-null="true" />
+        </property>
+        <property name="contactPersonPhone" type="string">
+            <column name="contact_person_phone" length="45" not-null="true" />
+        </property>
+        <property name="contactPersonEmail" type="string">
+            <column name="contact_person_email" length="45" not-null="true" />
+        </property>
+        <property name="termsandcondition" type="string">
+            <column name="termsandcondition" length="45" not-null="true" />
+        </property>
+        <property name="techFeedback" type="string">
+            <column name="tech_feedback" length="45" not-null="true" />
+        </property>
+        <property name="finFeedback" type="string">
+            <column name="fin_feedback" length="45" not-null="true" />
+        </property>
+        <property name="opFeedback" type="string">
+            <column name="op_feedback" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

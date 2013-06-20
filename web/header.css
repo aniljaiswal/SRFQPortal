@@ -1,0 +1,19 @@
+#htab
+{
+ 
+    background: #244458 url(images/header.gif) no-repeat right;
+    height: 100px;
+
+}
+#title
+{
+    color:whitesmoke;
+text-indent:20px;
+vertical-align:middle;
+font-size:22px;
+ font-family:'arial';
+ font-weight: bolder;
+}
+/*#logo{
+    background-image: url(logo.jpg);
+}*/

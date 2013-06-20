@@ -1,0 +1,24 @@
+#sbtab{
+    border-style: solid;
+    border-color:#666666;
+    background-color: #666666;
+}
+.sbtd{
+text-align: center;
+vertical-align: middle;
+color:whitesmoke;
+font-family: 'arial';
+font-weight: bold;
+
+}
+.sbtd:hover{
+    color:black;
+    background-color:#cccccc;
+}
+#time{
+    text-indent:10%;
+    vertical-align: middle;
+    color:white;
+font-family: 'arial';
+font-weight: bold;
+}

@@ -1,0 +1,94 @@
+body
+{
+  background:Url(images/bg1.gif);
+  color: #003366;
+  font: .8em normal, "Trebuchet MS",Tahoma, verdana, arial, helvetica, sans-serif;
+  line-height: 1.6em;
+}
+#afrole_heading{
+    background-image: url(bg_menu.jpg);
+    color:whitesmoke;
+    text-indent: 2%;
+}
+#afrole_tb{
+    background-color:lightsteelblue;
+    font-family: 'arial';
+    border-bottom-style: solid;
+    border-color: #003366;
+}
+#wrapper{
+    margin:1px auto;
+    background-color:whitesmoke;
+    width:1040px;
+}
+#header
+{
+    background: #244458 url(images/header.gif) no-repeat right;
+    height: 100px;
+}
+#title
+{
+    color:whitesmoke;
+text-indent:20px;
+vertical-align:middle;
+font-size:22px;
+ font-family:'arial';
+ font-weight: bolder;
+}
+#bgtable{
+    background-color:snow;
+}
+#sbtab{
+    border-style: solid;
+    border-color:#666666;
+    background-color: #666666;
+}
+.sbtd{
+text-align: center;
+vertical-align: middle;
+color:whitesmoke;
+font-family: 'arial';
+font-weight: bold;
+
+}
+.sbtd:hover{
+    color:black;
+    background-color:#cccccc;
+}
+#time{
+    text-indent:10%;
+    vertical-align: middle;
+    color:white;
+font-family: 'arial';
+font-weight: bold;
+}
+#body{
+    height:100%;
+    color:#244458;
+    background-color:white;
+}
+a:hover
+{
+color:#999999;
+}
+#footer{
+    background-color: #244458;
+    height:100%;
+    text-align: center;
+}
+.ftab
+{
+    color:whitesmoke;
+    text-align: left;
+   background-image:url(bg_menu.jpg);
+    font-family: 'arial';
+}
+a
+{    text-decoration:none;
+}
+a:visited
+{    color:inherit;
+}
+.foot:hover
+{    text-decoration:underline;
+}

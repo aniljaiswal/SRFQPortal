@@ -1,0 +1,137 @@
+#changepass,#configEnt,#configrole,#configemp,#allrole,#configsup{
+    width:inherit;
+    color:black;
+    padding-top:30px;
+    height:450px;
+    background-color:#aaccdd;
+    overflow: auto;
+    
+}
+#viewbody{
+    background-color:#aaccdd;
+}
+#changepass table{
+   margin:auto;
+}
+#changepass table td{
+  padding-bottom: 5px;
+  padding-right: 3px;
+}
+#formhead{
+    background-color: #333333;
+    color:#cccccc;
+    text-align: center;
+    height:25px;
+}
+span{
+    color:red;
+}
+#configEnt table,#configrole table,#configemp table,#scrollview table,#allrole table,#configsup table{
+    margin:auto;
+}
+#view{
+   
+    border-color: #244458;
+    border-width: 1px;
+}
+#view td{
+    text-align: center;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color:#244458;
+    border-width:1px;
+}
+#configEnt table td,#configrole table td,#configemp table td,#scrollview table td,#allrole table td, #configsup table td{
+    padding-bottom:5px;
+    padding-right: 15px;
+}
+#cpbutton{
+    height:25px;
+    width:150px;
+}
+#consub{
+    padding-top: 18px;
+    padding-left: 100px;
+}
+#configentmenu{
+    background-color: #009999;
+}
+#configentmenu ul{
+    list-style: none;
+}
+#configentmenu li{
+    display:inline;
+}
+#configentmenu li a{
+    text-decoration: none;
+    color:#eee;
+    padding:3px 20px 3px 20px;
+}
+#configentmenu li a:hover{
+    color:black;
+    background-color: #cccccc;
+}
+table caption{
+    font-size: 14px;
+    background-color: #244458;
+    color:#eee;
+    height:25px;
+    border-bottom-style: solid;
+    border-bottom-color: #aaccdd;
+    border-width: 1px;
+}
+#headrow{
+    font-weight: bold;
+    background-color: #009999;
+    text-align: center;
+        color:whitesmoke;
+ 
+}
+#headrow td{
+    border-bottom-style:solid;
+        border-color: #244458;
+        border-width: 1px;
+               vertical-align: middle;
+}
+#del,#new,#newpass,#edit,#roleresc,#viewtab{
+    border-bottom-style: solid;
+    border-color: #244458;
+}
+#msgconfig{
+    padding-left: 215px;
+}
+#del td{
+    text-align: center;
+}
+#viewdata{
+    color:black;
+    padding-top:30px;
+    height:450px;
+    background-color: #aaccdd;
+    overflow:auto;
+}
+#viewdata table,#viewemp table{
+     margin:auto;
+}
+#viewdata table{
+   width:400px;
+}
+#showdata{
+     border-style: solid;
+    border-color: #244458;
+    border-width: 1px;
+    margin:auto;
+    font-size: 15px;
+}
+#showdata td{
+    text-align: center;
+    border-right-style: solid;
+    border-bottom-style: solid;
+    border-color:#244458;
+    border-width:1px;
+}
+#head{
+    background-color: #009999;
+    text-align: center;
+    color:#333333;
+   }

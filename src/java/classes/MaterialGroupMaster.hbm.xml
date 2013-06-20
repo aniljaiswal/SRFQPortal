@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.MaterialGroupMaster" table="material_group_master" catalog="srfq">
+        <id name="materialGroupId" type="string">
+            <column name="Material_Group_Id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="materialGroupName" type="string">
+            <column name="Material_Group_Name" length="45" not-null="true" />
+        </property>
+        <set name="materialMasters" inverse="true">
+            <key>
+                <column name="Material_Group_Id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.MaterialMaster" />
+        </set>
+    </class>
+</hibernate-mapping>

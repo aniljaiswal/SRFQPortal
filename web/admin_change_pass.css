@@ -1,0 +1,20 @@
+#heading_acp{
+    background-image:url(bg_menu.jpg);
+    vertical-align:bottom;
+    text-indent: 3%;
+    color:whitesmoke;
+}
+#acp_tab{
+    font-family: 'arial';
+    background-color:whitesmoke;
+    border-bottom-style: solid;
+    border-color: #003366;
+}
+.sub_acp{
+    width: 150px;
+        height:35px;
+}
+.tf_acp{
+    width:200px;
+    height:25px;
+}

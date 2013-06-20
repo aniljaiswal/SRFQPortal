@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/srfq</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password">sudhir</property>
+    <mapping resource="classes/ResourceMaster.hbm.xml"/>
+    <mapping resource="classes/EmployeeMaster.hbm.xml"/>
+    <mapping resource="classes/SupplierStatusMaster.hbm.xml"/>
+    <mapping resource="classes/StatusMaster.hbm.xml"/>
+    <mapping resource="classes/MaterialMaster.hbm.xml"/>
+    <mapping resource="classes/SalutaionMaster.hbm.xml"/>
+    <mapping resource="classes/SampleRequisitionAcceptanceDetails.hbm.xml"/>
+    <mapping resource="classes/CurrencyMaster.hbm.xml"/>
+    <mapping resource="classes/RfqStatusMaster.hbm.xml"/>
+    <mapping resource="classes/SampleFinancialApproval.hbm.xml"/>
+    <mapping resource="classes/QuotationAnalysisInitiation.hbm.xml"/>
+    <mapping resource="classes/SampleAdminRequest.hbm.xml"/>
+    <mapping resource="classes/SupplierMaster.hbm.xml"/>
+    <mapping resource="classes/OrganizationMaster.hbm.xml"/>
+    <mapping resource="classes/FinancialGoodwillMaster.hbm.xml"/>
+    <mapping resource="classes/FinancialFeedbackMaster.hbm.xml"/>
+    <mapping resource="classes/UnitMeasureMaster.hbm.xml"/>
+    <mapping resource="classes/RequirementMaster.hbm.xml"/>
+    <mapping resource="classes/SampleProductionApproval.hbm.xml"/>
+    <mapping resource="classes/RequirementPriorityMaster.hbm.xml"/>
+    <mapping resource="classes/Employee.hbm.xml"/>
+    <mapping resource="classes/SupplierQuatationMaster.hbm.xml"/>
+    <mapping resource="classes/SupplierGoodwillMaster.hbm.xml"/>
+    <mapping resource="classes/RoleResourceMap.hbm.xml"/>
+    <mapping resource="classes/MaterialGroupMaster.hbm.xml"/>
+    <mapping resource="classes/SupplierHistory.hbm.xml"/>
+    <mapping resource="classes/RatingMaster.hbm.xml"/>
+    <mapping resource="classes/TechnicalFeedbackMaster.hbm.xml"/>
+    <mapping resource="classes/SampleRequisitionAcceptance.hbm.xml"/>
+    <mapping resource="classes/SampleAdminApproval.hbm.xml"/>
+    <mapping resource="classes/SupplierContactMaster.hbm.xml"/>
+    <mapping resource="classes/RoleMaster.hbm.xml"/>
+    <mapping resource="classes/MaterialTechGoodwillMaster.hbm.xml"/>
+    <mapping resource="classes/UserMaster.hbm.xml"/>
+    <mapping resource="classes/RequirementAnalysisInitiation.hbm.xml"/>
+    <mapping resource="classes/SampleDemandSpecfication.hbm.xml"/>
+    <mapping resource="classes/SampleTechApproval.hbm.xml"/>
+  </session-factory>
+</hibernate-configuration>

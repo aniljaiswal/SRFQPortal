@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.RoleResourceMap" table="role_resource_map" catalog="srfq">
+        <id name="roleResourceMapId" type="string">
+            <column name="Role_Resource_Map_Id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="roleMaster" class="classes.RoleMaster" fetch="select">
+            <column name="Role_id" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="resourceMaster" class="classes.ResourceMaster" fetch="select">
+            <column name="Resc_id" length="10" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

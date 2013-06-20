@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.RequirementPriorityMaster" table="requirement_priority_master" catalog="srfq">
+        <id name="RPriorityId" type="string">
+            <column name="R_Priority_Id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <property name="RPriorityDesc" type="string">
+            <column name="R_Priority_desc" length="7" not-null="true" />
+        </property>
+        <set name="requirementMasters" inverse="true">
+            <key>
+                <column name="R_Priority_id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.RequirementMaster" />
+        </set>
+    </class>
+</hibernate-mapping>

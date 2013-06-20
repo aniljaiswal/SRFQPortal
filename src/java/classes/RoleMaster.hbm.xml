@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.RoleMaster" table="role_master" catalog="srfq">
+        <id name="roleId" type="string">
+            <column name="Role_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="organizationMaster" class="classes.OrganizationMaster" fetch="select">
+            <column name="Org_id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="roleName" type="string">
+            <column name="Role_name" length="45" not-null="true" />
+        </property>
+        <property name="roleDesc" type="string">
+            <column name="Role_desc" length="45" not-null="true" />
+        </property>
+        <property name="statusId" type="string">
+            <column name="Status_id" length="10" not-null="true" />
+        </property>
+        <set name="employeeMasters" inverse="true" table="employee_role_map">
+            <key>
+                <column name="Role_id" length="10" not-null="true" />
+            </key>
+            <many-to-many entity-name="classes.EmployeeMaster">
+                <column name="Emp_id" length="10" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="roleResourceMaps" inverse="true">
+            <key>
+                <column name="Role_id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.RoleResourceMap" />
+        </set>
+    </class>
+</hibernate-mapping>

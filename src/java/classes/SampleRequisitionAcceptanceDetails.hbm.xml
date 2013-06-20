@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.SampleRequisitionAcceptanceDetails" table="sample_requisition_acceptance_details" catalog="srfq">
+        <id name="sampleReqId" type="string">
+            <column name="sample_req_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="unitMeasureMaster" class="classes.UnitMeasureMaster" fetch="select">
+            <column name="unit_id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="sampleExpectedSendingDate" type="date">
+            <column name="Sample_Expected_Sending_Date" length="10" not-null="true" />
+        </property>
+        <property name="quantity" type="string">
+            <column name="quantity" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

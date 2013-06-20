@@ -1,0 +1,63 @@
+.textbox{
+    width:170px;
+    height:18px;
+    border-style: solid;
+    border-color: #244458;
+    border-width: 1px;
+    
+}
+.button{
+    width:60px;
+    height:25px;
+}
+.submit2{
+    width:70px;
+    height:25px;
+}
+.submit3{
+    width:100px;
+        height:25px;
+}
+.select{
+     width:170px;
+    height:20px;
+    border-style: solid;
+    border-color: #244458;
+    border-width: 1px;
+}
+h1
+{
+	font-family:ae_Cortoba;
+    font-size:2.4em;
+    font-weight:500;
+    margin:0px ;
+    padding-left:50px;
+	padding-top:20px;
+	color:#eee;
+}
+h5
+{
+	font-family:ae_Cortoba;
+    font-size:2.4em;
+    font-weight:500;
+	color:#eee;
+}
+a{
+    text-decoration: none;
+}
+.select2{
+     width:100px;
+    height:20px;
+    border-style: solid;
+    border-color: #244458;
+    border-width: 1px;
+}
+.tarea{
+    width:170px;
+    height:50px;
+    border-style: solid;
+    border-color: #244458;
+    border-width: 1px;
+}
+
+ 

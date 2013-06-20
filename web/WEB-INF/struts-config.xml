@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+    <form-beans>
+        <form-bean name="AddContactBean" type="bean.AddContactBean"/>
+        <form-bean name="ConfigSupBean" type="bean.ConfigSupBean"/>
+      <form-bean name="ConfigRoleBean" type="bean.ConfigRoleBean"/>
+        <form-bean name="ConfigEntBean" type="bean.ConfigEntBean"/>
+        <form-bean name="MailBean" type="com.my.mail.MailBean"/>
+        <form-bean name="AllocateFuncRoleBean" type="bean.AllocateFuncRoleBean"/>
+        <form-bean name="AllocateFuncEmpBean" type="bean.AllocateFuncEmpBean"/>
+        <form-bean name="ForgotPassBean" type="bean.ForgotPassBean"/>
+        <form-bean name="EnterpriseBean" type="bean.EnterpriseBean"/>
+        <form-bean name="ChangePwdBean" type="bean.ChangePwdBean"/>
+        <form-bean name="LoginBean" type="bean.LoginBean"/>
+        <form-bean name="EBDTBean" type="bean.EBDTBean"/>
+        <form-bean name="SEBDTBean" type="bean.SEBDTBean"/>
+        <form-bean name="NBDTBean" type="bean.NBDTBean"/>
+        <form-bean name="GSAPBean" type="bean.GSAPBean"/>
+        <form-bean name="SeloBean" type="bean.SeloBean"/>
+        <form-bean name="SelfBean" type="bean.SelfBean"/>
+        <form-bean name="SeltBean" type="bean.SeltBean"/>
+        <form-bean name="ConfigEmpBean" type="bean.ConfigEmpBean"/>
+        <form-bean name="ChangePassBean" type="bean.ChangePassBean"/>
+        <form-bean name="Approval_for_sampling_Bean" type="bean.Approval_for_sampling_Bean"/>
+        <form-bean name="rfq_Bean2" type="bean.rfq_Bean2"/>
+        <form-bean name="rfq_Bean" type="bean.rfq_Bean"/>
+        <form-bean name="Admin_Approval_Bean2" type="bean.Admin_Approval_Bean2"/>
+        <form-bean name="Admin_Approval_Bean" type="bean.Admin_Approval_Bean"/>
+        <form-bean name="Admin_approval" type="bean.Admin_approval"/>
+        <form-bean name="view_sample_operational_feedback_Bean2" type="bean.view_sample_operational_feedback_Bean2"/>
+        <form-bean name="view_sample_operational_feedback_Bean" type="bean.view_sample_operational_feedback_Bean"/>
+        <form-bean name="view_sample_financial_feedback_Bean2" type="bean.view_sample_financial_feedback_Bean2"/>
+        <form-bean name="view_sample_financial_feedback_Bean" type="bean.view_sample_financial_feedback_Bean"/>
+        <form-bean name="view_sample_technical_feedback_Bean" type="bean.view_sample_technical_feedback_Bean"/>
+    
+          <!--- ==================Production =========== -->
+         
+        <form-bean name="Req_Specbean" type="bean.Req_Specbean"/>
+        <form-bean name="review_samplingbean" type="bean.review_samplingbean"/>
+        <form-bean name="demand_samplebean" type="bean.demand_samplebean"/>
+        <form-bean name="sample_feedbackbean" type="bean.sample_feedbackbean"/>
+        <form-bean name="final_approvalbean" type="bean.final_approvalbean"/>
+        <form-bean name="add_new_requestbean" type="bean.add_new_requestbean"/>
+        <form-bean name="view_update_requestbean" type="bean.view_update_requestbean"/>
+        <form-bean name="Req_analysis_initiationbean" type="bean.Req_analysis_initiationbean"/>
+        <form-bean name="add_new_requestbean" type="bean.add_new_requestbean"/>
+          <!-- === -->
+         <!-- ======================================Supplier ================================  -->
+        <form-bean name="NewQuotationBean" type="bean.NewQuotationBean"/>
+        <form-bean name="updateBean1" type="bean.updateBean1"/>
+        <form-bean name="EvaluationBean2" type="bean.EvaluationBean2"/>
+        <form-bean name="EvaluationBean1" type="bean.EvaluationBean1"/>
+        <form-bean name="ConfirmBean1" type="bean.ConfirmBean1"/>
+       <!-- ================================  -->
+       <!-- ==================Technical ======================== -->
+        <form-bean name="ViewFeedbackBean" type="bean.ViewFeedbackBean"/>
+        <form-bean name="SampleAppBean" type="bean.SampleAppBean"/>
+        <form-bean name="SampleFbBean" type="bean.SampleFbBean"/>
+        <form-bean name="TechFeedbacksBean" type="bean.TechFeedbacksBean"/>
+        <form-bean name="viewHistoryBean" type="bean.viewHistoryBean"/>
+       <!-- =================================================== -->
+      <!--- =========Finacial ===============-->
+       <form-bean name="Supplier_Id" type="bean.Supplier_Id"/>
+        <form-bean name="Financial_Feedback_Supplier" type="bean.Financial_Feedback_Supplier"/>
+        <form-bean name="Initial_Financial_Approval_Rejection" type="bean.Initial_Financial_Approval_Rejection"/>
+        <form-bean name="Sample_Financial_Feedback_Bean" type="bean.Sample_Financial_Feedback_Bean"/>
+        <form-bean name="Financial_Feedback_Bean" type="bean.Financial_Feedback_Bean"/>
+        <form-bean name="ffosb2" type="bean.ffosb2"/>
+        <form-bean name="ffos" type="bean.ffos"/>
+       <!-- ======================================-->
+    
+    </form-beans>
+    
+    <global-exceptions>
+    
+    </global-exceptions>
+
+    <global-forwards>
+        <forward name="master" path="/master.do"/>
+        <forward name="change" path="/change.do"/>
+        <forward name="forgot" path="/forgot.do"/>
+        <forward name="enterprise" path="/enterprise.do"/>  
+         <forward name="config1" path="/config1.do"/>
+        <forward name="config2" path="/config2.do"/>
+        <forward name="config3" path="/config3.do"/>
+        <forward name="role1" path="/role1.do"/>
+        <forward name="role2" path="/role2.do"/>
+        <forward name="role3" path="/role3.do"/>
+        <forward name="emp1" path="/emp1.do"/>
+        <forward name="emp2" path="/emp2.do"/>
+        <forward name="emp3" path="/emp3.do"/>
+        <forward name="emp4" path="/emp4.do"/>
+    </global-forwards>
+
+    <action-mappings>
+           <action input="/index.jsp" name="view_sample_technical_feedback_Bean" path="/view1" scope="session" type="actions.view_sample_technical_feedback_Action">
+            <forward name="success" path="view1"></forward>
+        </action>
+        <action input="/View_Sample_Technical_Feedback.jsp" name="view_sample_technical_feedback_Bean" path="/fin" scope="session" type="actions.view_sample_technical_feedback_Action2">
+            <forward name="fin1" path="view1"></forward>
+        </action>
+        <action input="/index.jsp" name="view_sample_financial_feedback_Bean" path="/view2" scope="session" type="actions.view_sample_financial_feedback_Action">
+            <forward name="success1" path="view2"/>
+        </action>
+        <action input="/view_sample_financial_feedback.jsp" name="view_sample_financial_feedback_Bean2" path="/fin3" scope="session" type="actions.view_sample_financial_feedback_Action2">
+        </action>
+        <action input="/index.jsp" name="view_sample_operational_feedback_Bean" path="/view3" scope="session" type="actions.view_sample_operational_feedback_Action">
+            <forward name="success2" path="view3"/>
+        </action>
+        <action input="/view_sample_operational_feedback.jsp" name="view_sample_operational_feedback_Bean2" path="/fin4" scope="session" type="actions.view_sample_operational_feedback_Action2"/>
+        <action input="/index.jsp" name="Admin_Approval_Bean" path="/view4" scope="session" type="actions.Admin_approval_Action">
+            <forward name="success3" path="view4"/>
+        </action>
+        <action input="/Admin_Approval.jsp" name="Admin_Approval_Bean2" path="/fin5" scope="session" type="actions.Admin_Approval_Action2">
+            <forward name="success4" path="fin5"/>
+        </action>
+        <action input="/index.jsp" name="rfq_Bean" path="/view5" scope="session" type="actions.rfq_Action">
+            <forward name="success5" path="view5"/>
+        </action>
+        <action input="/view_rfq_status_and_compare.jsp" name="rfq_Bean2" path="/fin6" scope="session" type="actions.rfq_Action2">
+            <forward name="success6" path="/success.jsp"/>
+            <forward name="error" path="/error.jsp"/>
+        </action>
+        <action input="/index.jsp" name="Approval_for_sampling_Bean" path="/view6" scope="session" type="actions.Approval_for_sampling_Action">
+            <forward name="success7" path="/Approval_for_sampling.jsp"/>
+        </action>
+        <action input="/Main1.jsp"  name="LoginBean" path="/log" scope="session" type="bean.LoginAction" >
+            <forward name="admin" path="home1"/>
+            <forward name="financial" path="home1"/>
+            <forward name="technical" path="home1"/>
+            <forward name="production" path="home1"/>
+        </action>
+        <action input="/Main1.jsp" path="/abc" scope="session" type="Services.ChangeLanguageAction" parameter="language"/>
+        <action path="/login" forward="login"/>
+        <action path="/master" forward="welcome"/>
+        <action input="/ChangePassword.jsp" name="ChangePwdBean" path="/pwd" scope="session" type="bean.ChangePwdAction">
+            <forward name="master" path="/Home.jsp"/>
+        </action>
+        
+        <action input="/AdminEnterprise.jsp" name="EnterpriseBean" path="/enterprise1" scope="session" type="bean.EnterpriseAction">
+            <forward name="master" path="/Home.jsp"/>
+        </action>
+                 <action input="/ForgotPassword.jsp" name="ForgotPassBean" path="/master" scope="session" type="bean.ForgotPassAction">
+            <forward name="master" path="/Home.jsp"/>
+        </action>
+                 <action  path="/emp" scope="session" type="bean.AllocateEmp">
+            <forward name="employee" path="AllocateEmp"/>    
+        </action>
+        <action input="/AllocateFuncEmp.jsp" name="AllocateFuncEmpBean" path="/Employeee" scope="request" type="bean.AllocateFuncEmpAction">
+            <forward name="allocemp" path="AllocateEmp"/> 
+        </action>
+        <action path="/role"  type="bean.AllocateRole">
+            <forward name="roleresc" path="AllocateRole"/>    
+        </action>
+        <action input="/AllocateFuncRole.jsp" name="AllocateFuncRoleBean" path="/FuncRole" scope="session" type="bean.AllocateFuncRoleAction">
+            <forward name="allocrole" path="AllocateRole"/>  
+        </action>
+        <action  path="/logout" scope="session" type="bean.LogoutAction">
+            <forward name="logout1" path="welcome"/>    
+        </action>
+        <action path="/changeuserpwd" forward="changepass1"/>
+        <action path="/home" forward="home1"/>
+        <action path="/master" forward="welcome"/>
+        <action path="/login" forward="login"/>
+        <action path="/change" forward="changepass"/>
+        <action path="/enterprise" forward="enter"/>
+        <action input="/menu.jsp" path="/vwt" type="actions.SingletAction">
+            <forward name="vstf" path="/SampleTechnicalFeedback.jsp"/>
+        </action>
+        <action input="/SampleTechnicalFeedback.jsp" name="SeltBean" path="/vt" scope="session" type="actions.STFAction">
+            <forward name="vstf" path="/SampleTechnicalFeedback.jsp"/>
+        </action>
+        <action input="/SampleFinancialFeedback.jsp" name="SelfBean" path="/vf" scope="session" type="actions.SFFAction">
+            <forward name="vsff" path="/SampleFinancialFeedback.jsp"/>
+        </action>
+        <action input="/menu.jsp" path="/vwf" scope="session" type="actions.SinglefAction">
+            <forward name="vsff" path="/SampleFinancialFeedback.jsp"/>
+        </action>
+        <action input="/SampleOperationalFeedback.jsp" name="SeloBean" path="/vo" scope="session" type="actions.SOFAction">
+            <forward name="vsof" path="/SampleOperationalFeedback.jsp"/>
+        </action>
+        <action input="/menu.jsp" path="/vwo" scope="session" type="actions.SingleoAction">
+            <forward name="vsof" path="/SampleOperationalFeedback.jsp"/>
+        </action>
+        <action path="/vsap" scope="session" type="actions.VSAPAction">
+            <forward name="vsaap" path="vsap"/>
+        </action>
+        <action path="/gsap" scope="session" type="actions.GSAPAction">
+            <forward name="gsaap" path="gsap"/>
+        </action>
+        <action input="/GiveSampleApproval.jsp" name="GSAPBean" path="/gsapi" scope="session" type="actions.GSAPIAction">
+            <forward name="gs" path="gsap"/>
+        </action>
+        <action path="/nbdt" scope="session" type="actions.SinglenNBdtAction">
+            <forward name="nbt" path="nbdt"/>
+        </action>
+        <action input="/NewBidDate.jsp" name="NBDTBean" path="/nbdti" scope="session" type="actions.NBDTIAction">
+            <forward name="nbi" path="/NewBidDate.jsp"/>
+        </action>
+        <action path="/ebdt" scope="session" type="actions.SingleEBDTAction">
+            <forward name="edit" path="ebdt"/>
+        </action>
+        <action input="/SelectEditBidDate.jsp" name="SEBDTBean" path="/bdt" scope="session" type="actions.EBDTAction">
+            <forward name="ed" path="bdt"/>
+        </action>
+        <action input="/EditBid Date.jsp" name="EBDTBean" path="/ebdti" scope="session" type="actions.EBDTIAction">
+            <forward name="ebi" path="/EditBid Date.jsp"/>
+        </action>
+        <action path="/sap" forward="sap"/>
+        <action path="/bdm" forward="bdm"/>
+        <action input="/Body.jsp" name="ConfigEmpBean" path="/configemp" scope="session" type="bean.ConfigEmpActionNew">
+            <forward name="conemp" path="/config.do"/>
+        </action>
+        <action path="/configemp" scope="session" type="bean.ConfigEmpAction">
+            <forward name="conemp" path="configEmpPage"/>
+        </action>
+        <action input="/" name="ConfigEmpBean" path="/emp1" forward="configEmpPage1"/>
+        <action input="/" name="ConfigEmpBean" path="/emp2" forward="configEmpPage2"/>
+        <action input="/" name="ConfigEmpBean" path="/emp3" forward="configEmpPage3"/>
+        <action input="/" name="ConfigEmpBean" path="/emp4" forward="configEmpPage4"/>
+        <action input="/changepass.jsp" name="ChangePassBean" path="/changepwd" scope="session" type="bean.ChangePassAction">
+            <forward name="change" path="changepass1"/>
+        </action>
+        <action input="/Mail.jsp" name="MailBean" path="/mail" scope="session" type="com.my.mail.MailAction">
+           
+        </action>
+        <action path="/changepass" forward="changepass1"/>
+         <action path="/configNew" scope="session" type="bean.ConfigEntAction">
+            <forward name="config" path="configEntPage"/>
+        </action>  <action input="/body.jsp" name="ConfigEntBean" path="/confignew" scope="session" type="bean.ConfigEntActionNew">
+            <forward name="config" path="/configNew.do"/>
+            </action>
+        <action path="/confrole" scope="session" type="bean.ConfigRoleAction">
+        <forward name="conrole" path="configRolePage"/>
+        </action>
+        <action input="/body.jsp" name="ConfigRoleBean" path="/configrole" scope="session" type="bean.ConfigureRoleActionNew">
+        <forward name="conrole" path="/confrole.do"/>
+        </action>
+        
+        
+        <action path="/consup" scope="session" type="bean.ConfigSupAction">
+        <forward name="sup" path="ConfigSupPage"/>
+        </action>
+        <action input="/Body.jsp" name="ConfigSupBean" path="/supnew" scope="session" type="bean.ConfigSupActionNew">
+        <forward name="sup" path="/consup.do"/>
+        </action>
+        <action input="/" name="AddContactBean" path="/contact" scope="session" type="bean.AddContactAction">
+            <forward name="add" path="AddContactPage"/>
+         </action>
+        <action input="/Body.jsp" name="AddContactBean" path="/contactnew" scope="session" type="bean.AddContactActionNew">
+        <forward name="add" path="/contact.do"/>
+        </action>
+        <action input="/" name="ConfigEntBean" path="/view" scope="session" type="bean.ViewAction">
+             <forward name="show" path="ViewPage"/>
+        </action>
+       
+        <action input="/" name="ConfigEntBean" path="/config1" forward="configEntPage1"/>
+        <action input="/" name="ConfigEntBean" path="/config2" forward="configEntPage2"/>
+        <action input="/" name="ConfigEntBean" path="/config3" forward="configEntPage3"/>
+        <action input="/" name="ConfigRoleBean" path="/role1" forward="configRolePage1"/>
+        <action input="/" name="ConfigRoleBean" path="/role2" forward="configRolePage2"/>
+        <action input="/" name="ConfigRoleBean" path="/role3" forward="configRolePage3"/>
+      
+        <action input="/" name="ConfigSupBean" path="/sup1" forward="ConfigSupPage1"/>
+        <action input="/" name="ConfigSupBean" path="/sup2" forward="ConfigSupPage2"/>
+        <action input="/" name="ConfigSupBean" path="/sup3" forward="ConfigSupPage3"/>
+        <action input="/" name="AddContactBean" path="/contact1" forward="AddContactPage1"/>
+        <action input="/" name="AddContactBean" path="/contact2" forward="AddContactPage2"/>
+        <action input="/" name="AddContactBean" path="/contact3" forward="AddContactPage3"/>
+        <!--- ============Producation ====================-->
+        <action  path="/add"  type="actions.add_new_request">
+            <forward name="in4" path="add"/>
+        </action>
+        <action input="/add_new_request.jsp" name="add_new_requestbean" path="/addb" scope="session" type="actions.add_new_requestbutton">
+            <forward name="fill" path="refill"/>
+        </action>
+        <action path="/log1" scope="session" type="actions.Req_analysis_initiation">
+            <forward name="in" path="rqi">
+                  </forward>
+        </action>
+        <action input="/index1.jsp" name="Req_analysis_initiationbean" path="/button" scope="session" type="actions.Req_analysis_initiationbutton">
+            <forward name="in2" path="/index1.jsp"/>
+        </action>
+        <action  path="/viewv" scope="session" type="actions.view_update_requestv">
+            <forward name="in3" path="vu"/>
+        </action>
+        <action input="/view_update_request.jsp" name="view_update_requestbean" path="/view" scope="session" type="actions.view_update_request">
+            <forward name="in5" path="vu"></forward>
+        </action>       
+        <action path="/feed" type="actions.sample_feedback">
+            <forward name="in7" path="feed"></forward>
+        </action>
+        <action input="/sample_feedback.jsp" name="sample_feedbackbean" path="/feed1" scope="session" type="actions.sample_feedback1">
+            <forward name="in8" path="/msg.jsp"></forward>
+        </action>
+        <action path="/demand"  type="actions.demand_sample">
+            <forward name="in6" path="sdm"/>
+        </action>
+        <action input="/demand_sample.jsp" name="demand_samplebean" path="/demandb" scope="session" type="actions.demand_samplebutton"/>
+        <action path="/final" type="actions.final_approval">
+            <forward name="in8" path="final"/>
+        </action>
+        <action path="/review" type="actions.review_sampling">
+            <forward name="in9" path="review"/>
+        </action>
+        <action input="/specification.jsp" name="Req_Specbean" path="/Specb" scope="session" type="actions.Req_Specb"/>
+        <action input="/specification.jsp" name="Req_Specbean" path="/Spec" scope="session" type="actions.Req_Spec">
+            <forward name="in1" path="spe"/>
+        </action>  
+        <action input="/review_sampling.jsp" name="review_samplingbean" path="/reviewb" scope="session" type="actions.review_samplingbutton"/>
+        <action input="/final_approval.jsp" name="final_approvalbean" path="/final1" scope="session" type="actions.final_approvalbutton"/>
+       <!-- ==================================== -->
+       <!-- ====================================Technical ===================================== -->
+        <action path="/suphi" type="actions.ViewFeedbackAction1">
+            <forward name="in3" path="suphi"></forward>
+        </action>
+        <action input="/viewfeedback.jsp" name="ViewFeedbackBean" path="/suphi" scope="session" type="actions.ViewFeedbackAct1">
+            <forward name="in3" path="suphi"/>
+        </action>
+        <action input="/viewHistory.jsp" name="viewHistoryBean" path="/hist" scope="session" type="actions.viewHistory1">
+            <forward name="history" path="/viewHistory.jsp"></forward>
+        </action>
+        <action path="/hi" type="actions.viewHistory">
+            <forward name="history" path="/viewHistory.jsp"></forward>
+        </action>
+        <action path="/abct" type="actions.SampleApprovalAct">
+            <forward name="vwfd" path="/SampleTechApp.jsp"></forward>
+        </action>
+        <action input="/SampleTechApp.jsp" name="SampleAppBean" path="/vw" scope="session" type="actions.SampleAppAction1">
+            <forward name="vwfd" path="/SampleTechApp.jsp"></forward>
+        </action>
+        <action input="/TechFeedbacks.jsp" name="TechFeedbacksBean" path="/logg" scope="session" type="actions.TechFeedbackAct1">
+            <forward name="tcs" path="techfeed"></forward>
+            <forward name="mnop" path="techfeed"/>
+        </action>
+        <action path="/tf" type="actions.techFeedbackact">
+            <forward name="tchfb" path="techfeed"></forward>
+               </action>
+        <action path="/sf" type="actions.SampleFeedbackact1">
+            <forward name="sampfeed" path="sf"></forward>
+        </action>
+        <action input="/SampleFeedback.jsp" name="SampleFbBean" path="/sampl" scope="session" type="actions.SamplefbAct1">
+            <forward name="sampfeed" path="sf"></forward>
+        </action>
+              <action path="/sa" type="actions.SampleApprovalAct">
+            <forward name="vwfd" path="sa"></forward>
+        </action>
+        <action input="/SampleTechApp.jsp" name="SampleAppBean" path="/vw" scope="session" type="actions.SampleAppAction1">
+            <forward name="vwfd" path="sa"></forward>
+        </action>
+       <!---  ========================== =============================================  -->
+       <!-- ======================================Supplier ================================  -->
+        <action path="/AddQ" scope="session" type="actions.NewQuotationAction">
+            <forward name="nq" path="anq"/>
+        </action>
+        <action input="/NewQuotation.jsp" name="NewQuotationBean" path="/abc1" scope="session" type="actions.StrutsAction1">
+            <forward name="nq" path="/NewQuotation.jsp"/>
+            <forward name="sq" path="/suppQID.jsp"/>
+        </action>
+        <action path="/upq" scope="session" type="actions.UpdateAction1">
+            <forward name="uq" path="up"/>
+        </action>
+        <action input="/updateQuo.jsp" name="updateBean1" path="/upq2" scope="session" type="actions.UpdateAction2">
+            <forward name="uq" path="up"/>
+            <forward name="error" path="er"/>
+            <forward name="right" path="ri"/>
+        </action>
+        <action path="/ev1" scope="session"  type="actions.NewStrutsAction">
+            <forward name="ed" path="nev"/>
+        </action>
+        <action input="/new_evaluationdesc.jsp" path="/ev2" name="EvaluationBean2" type="actions.EvaluationAction2">
+            <forward name="em" path="mev"/>
+        </action>
+        <action input="/evaluation_main.jsp" name="EvaluationBean1" path="/ev3" scope="session" validate="true" type="actions.EvaluationAction3" >
+            <forward name="sub" path="su"/>
+        </action>
+        <action input="/Confirmation.jsp" path="/con1" name="ConfirmBean1" scope="session" type="actions.ConfirmAction2">
+            <forward name="display" path="conf"/>
+        </action>
+        <action  path="/con2" type="actions.NewStrutsAction">
+            <forward name="ed" path="conf"/>
+        </action>
+       <!--     -->
+       <!--- =========Finacial ===============-->
+         <action input="/" name="ffos" path="/feedback" scope="session" type="actions.ffosa">
+        <forward name="ffs" path="feedback"/>
+        </action>
+        <action input="/" name="Financial_Feedback_Bean" path="/loge" scope="session" type="actions.Financial_Feedback1_Action">
+        <forward name="abc" path="/FinancialFeedback.jsp"/>
+        </action>
+        <action input="/InitialFinancialApprovalorRejection.jsp"  path="/Iniapprej" scope="session" type="actions.Initial_Financial_Approval_Rejection_Action">
+           <forward name="ifaor" path="/InitialFinancialApprovalorRejection.jsp"/>
+
+           </action>
+           <action path="/iar" scope="session" type="actions.Initial_Approval_Rejection">
+               <forward name="initalapproval" path="iapp"/>
+           </action>
+        
+        <action input="/FinancialFeedbackonSupplier.jsp" name="Supplier_Id" path="/abcdef" scope="session" type="actions.Supplier_Id_Action">
+            <forward name="abcd" path="feeddue"/>
+        </action>
+        <action input="/InitialFinancialApprovalorRejection.jsp" name="Supplier_Id" path="/app" scope="session" type="actions.Initial_Approval_Rejection"/>
+        <action input="/FinancialFeedback.jsp" name="Financial_Feedback_Bean" path="/finanfeed" scope="session" type="actions.Financial_Feedback1_Action">
+            <forward name="feed" path="feeddue"/>
+            </action>
+       <!-- ======================================-->
+    </action-mappings>
+    
+    <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
+
+    <message-resources parameter="com/myapp/struts/ApplicationResource"/>    
+    
+    <!-- ========================= Tiles plugin ===============================-->
+    <!--
+    This plugin initialize Tiles definition factory. This later can takes some
+    parameters explained here after. The plugin first read parameters from
+    web.xml, thenoverload them with parameters defined here. All parameters
+    are optional.
+    The plugin should be declared in each struts-config file.
+    - definitions-config: (optional)
+    Specify configuration file names. There can be several comma
+    separated file names (default: ?? )
+    - moduleAware: (optional - struts1.1)
+    Specify if the Tiles definition factory is module aware. If true
+    (default), there will be one factory for each Struts module.
+    If false, there will be one common factory for all module. In this
+    later case, it is still needed to declare one plugin per module.
+    The factory will be initialized with parameters found in the first
+    initialized plugin (generally the one associated with the default
+    module).
+    true : One factory per module. (default)
+    false : one single shared factory for all modules
+    - definitions-parser-validate: (optional)
+    Specify if xml parser should validate the Tiles configuration file.
+    true : validate. DTD should be specified in file header (default)
+    false : no validation
+
+    Paths found in Tiles definitions are relative to the main context.
+    -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin" >
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />      
+        <set-property property="moduleAware" value="true" />
+    </plug-in>
+    
+    <!-- ========================= Validator plugin ================================= -->
+    <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+        <set-property
+            property="pathnames"
+            value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml"/>
+    </plug-in>
+  
+</struts-config>

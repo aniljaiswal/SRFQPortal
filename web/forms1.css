@@ -1,0 +1,14 @@
+.list{
+    width:220px;
+    height:250px;
+     border-style: solid;
+    border-color: #244458;
+    border-width: 1px;
+}
+.select3{
+    width:135px;
+    height:20px;
+    border-style: solid;
+    border-color: #244458;
+    border-width: 1px;
+}

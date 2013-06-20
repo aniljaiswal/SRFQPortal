@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.QuotationAnalysisInitiation" table="quotation_analysis_initiation" catalog="srfq">
+        <id name="suppQuotationId" type="string">
+            <column name="Supp_Quotation_Id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="statusMaster" class="classes.StatusMaster" fetch="select">
+            <column name="Status_id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="statusChangedBy" type="string">
+            <column name="Status_changed_By" length="45" not-null="true" />
+        </property>
+        <property name="statusChangedDate" type="date">
+            <column name="Status_changed_date" length="10" not-null="true" />
+        </property>
+        <property name="remark" type="string">
+            <column name="Remark" length="45" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

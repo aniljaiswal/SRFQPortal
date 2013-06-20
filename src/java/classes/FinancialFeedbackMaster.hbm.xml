@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.FinancialFeedbackMaster" table="financial_feedback_master" catalog="srfq">
+        <id name="financFeedbackId" type="string">
+            <column name="Financ_Feedback_Id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="supplierQuatationMaster" class="classes.SupplierQuatationMaster" fetch="select">
+            <column name="Supp_Quatation_Id" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="ratingMaster" class="classes.RatingMaster" fetch="select">
+            <column name="Rating_Id" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="financialGoodwillMaster" class="classes.FinancialGoodwillMaster" fetch="select">
+            <column name="Financ_GoodWill_Id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="financApproved" type="string">
+            <column name="Financ_Approved" length="4" not-null="true" />
+        </property>
+        <property name="feedback" type="string">
+            <column name="Feedback" length="45" not-null="true" />
+        </property>
+        <property name="feedbackBy" type="string">
+            <column name="Feedback_by" length="10" not-null="true" />
+        </property>
+        <property name="feedBackDate" type="date">
+            <column name="FeedBackDate" length="10" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

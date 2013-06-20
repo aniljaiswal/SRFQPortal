@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.RequirementMaster" table="requirement_master" catalog="srfq">
+        <id name="reqId" type="string">
+            <column name="Req_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="requirementPriorityMaster" class="classes.RequirementPriorityMaster" fetch="select">
+            <column name="R_Priority_id" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="materialMaster" class="classes.MaterialMaster" fetch="select">
+            <column name="Material_Id" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="unitMeasureMaster" class="classes.UnitMeasureMaster" fetch="select">
+            <column name="unit_Id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="quantity" type="string">
+            <column name="Quantity" length="20" not-null="true" />
+        </property>
+        <property name="reqPostingOpeningDate" type="date">
+            <column name="Req_posting_Opening_date" length="10" not-null="true" />
+        </property>
+        <property name="reqPostingClosingDate" type="date">
+            <column name="Req_posting_closing_date" length="10" not-null="true" />
+        </property>
+        <property name="postedBy" type="string">
+            <column name="Posted_by" length="45" not-null="true" />
+        </property>
+        <set name="requirementAnalysisInitiations" inverse="true">
+            <key>
+                <column name="Req_id" length="10" not-null="true" unique="true" />
+            </key>
+            <one-to-many class="classes.RequirementAnalysisInitiation" />
+        </set>
+        <set name="supplierQuatationMasters" inverse="true">
+            <key>
+                <column name="Req_id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.SupplierQuatationMaster" />
+        </set>
+    </class>
+</hibernate-mapping>

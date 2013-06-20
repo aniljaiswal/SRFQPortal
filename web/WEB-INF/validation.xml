@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.1.3//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_1_3.dtd">
+
+<form-validation>
+
+<!--
+     This is a minimal Validator form file with a couple of examples.
+-->
+
+    <global>
+
+        <!-- An example global constant
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^\d{5}\d*$</constant-value>
+        </constant>
+        end example-->
+
+    </global>
+
+    <formset>
+
+        <!-- An example form --> 
+     
+         <form name="TechFeedbacksBean">
+            <field
+                property="suppQuatationId"
+                depends="required">
+                    <arg key="logonForm.suppQuatationId"/>
+            </field>
+
+            <field
+                property="materialGoodwillId"
+                depends="required">
+                    <arg key="materialGoodwillId"/>
+            </field>
+
+            <field
+                property="ratingId"
+                depends="required">
+                    <arg key="logonForm.ratingId"/>
+            </field>
+
+            <field
+                property="techFeedbackId"
+                depends="required">
+                    <arg key="logonForm.techFeedbackId"/>
+            </field>
+
+            <field
+                property="techApproved"
+                depends="required">
+                    <arg key="logonForm.techApproved"/>
+            </field>
+
+            <field
+                property="feedback"
+                depends="required">
+                    <arg key="logonForm.feedback"/>
+            </field>
+
+            <field
+                property="feedbackBy"
+                depends="required">
+                    <arg key="logonForm.feedbackBy"/>
+            </field>
+
+        </form>
+
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+        </form>
+        <form name="ConfigEmpBean">
+            <field
+                property="firstname"
+                depends="required">
+                    <arg key="ConfigEmpBean.firstname"/>
+            </field>
+            <field
+                property="lastname"
+                depends="required">
+                    <arg key="ConfigEmpBean.lastname"/>
+            </field>
+            <field
+                property="curstreetadd"
+                depends="required">
+                    <arg key="ConfigEmpBean.curstreetadd"/>
+            </field>
+             <field
+                property="curcountry"
+                depends="required">
+                    <arg key="ConfigEmpBean.curcountry"/>
+            </field>
+             <field
+                property="curstate"
+                depends="required">
+                    <arg key="ConfigEmpBean.curstate"/>
+            </field>
+             <field
+                property="curcity"
+                depends="required">
+                    <arg key="ConfigEmpBean.curcity"/>
+            </field>
+            <field
+                property="curzip"
+                depends="required">
+                    <arg key="ConfigEmpBean.curzip"/>
+            </field>
+            <field
+                property="curphone1"
+                depends="required">
+                    <arg key="ConfigEmpBean.curphone1"/>
+            </field>
+            <field
+                property="curphone2"
+                depends="required">
+                    <arg key="ConfigEmpBean.curphone2"/>
+            </field>
+            <field
+                property="curmobile"
+                depends="required">
+                    <arg key="ConfigEmpBean.curmobile"/>
+            </field>
+            <field
+                property="curfax"
+                depends="required">
+                    <arg key="ConfigEmpBean.curfax"/>
+            </field>
+            <field
+                property="perstreetadd"
+                depends="required">
+                    <arg key="ConfigEmpBean.perstreetadd"/>
+            </field>
+            <field
+                property="percountry"
+                depends="required">
+                    <arg key="ConfigEmpBean.percountry"/>
+            </field>
+             <field
+                property="perstate"
+                depends="required">
+                    <arg key="ConfigEmpBean.perstate"/>
+            </field>
+             <field
+                property="percity"
+                depends="required">
+                    <arg key="ConfigEmpBean.percity"/>
+            </field>
+            <field
+                property="perzip"
+                depends="required">
+                    <arg key="ConfigEmpBean.perzip"/>
+            </field>
+            <field
+                property="perphone1"
+                depends="required">
+                    <arg key="ConfigEmpBean.perphone1"/>
+            </field>
+            <field
+                property="perphone2"
+                depends="required">
+                    <arg key="ConfigEmpBean.perphone2"/>
+            </field>
+            <field
+                property="permobile"
+                depends="required">
+                    <arg key="ConfigEmpBean.permobile"/>
+            </field>
+            <field
+                property="perfax"
+                depends="required">
+                    <arg key="ConfigEmpBean.perfax"/>
+            </field>
+            <field
+                property="joining"
+                depends="required">
+                    <arg key="ConfigEmpBean.joining"/>
+            </field>
+            <field
+                property="leaving"
+                depends="required">
+                    <arg key="ConfigEmpBean.leaving"/>
+            </field>
+            <field
+                property="status"
+                depends="required">
+                    <arg key="ConfigEmpBean.status"/>
+            </field>
+            <field
+                property="email"
+                depends="required">
+                    <arg key="ConfigEmpBean.email"/>
+            </field>
+        </form>
+<form name="NewQuotationBean">
+            <field
+                property="txtid"
+                depends="required">
+                    <arg key="logonForm.txtid"/>
+            </field>
+            
+         
+            
+
+
+            
+        </form>
+        <form name="updateBean1">
+            <field
+                property="txtid"
+                depends="required">
+                    <arg key="logonForm.txtid"/>
+            </field>
+          
+            
+        </form>
+
+
+   <form name="GSAPBean">
+            <field
+                property="select"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="textfield2"
+                depends="required">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+            <field
+                property="textarea"
+                depends="required">
+                    <arg key="logonForm.txtarea"/>
+            </field>
+            <field
+                property="textfield3"
+                depends="required">
+                    <arg key="logonForm.txtfield"/>
+            </field>
+        </form>
+        <form name="NBDTBean">
+            <field
+                property="select"
+                depends="required">
+                    <arg key="logonForm.matid"/>
+            </field>
+            <field
+                property="textfield2"
+                depends="required">
+                    <arg key="logonForm.qualt"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+            <field
+                property="select2"
+                depends="required">
+                    <arg key="logonForm.uid"/>
+            </field>
+            <field
+                property="textfield3"
+                depends="required">
+                    <arg key="logonForm.opdt"/>
+            </field>
+            <field
+                property="textfield4"
+                depends="required">
+                    <arg key="logonForm.cldt"/>
+            </field>
+            <field
+                property="textfield5"
+                depends="required">
+                    <arg key="logonForm.pstdby"/>
+            </field>
+            <field
+                property="select3"
+                depends="required">
+                    <arg key="logonForm.rpid"/>
+            </field>
+        </form>
+
+    </formset>
+
+    <!-- An example formset for another locale -->
+    <formset language="fr">
+
+        <constant>
+            <constant-name>postalCode</constant-name>
+            <constant-value>^[0-9a-zA-Z]*$</constant-value>
+        </constant>
+
+        <!-- An example form -->
+        <form name="logonForm">
+            <field
+                property="username"
+                depends="required">
+                    <arg key="logonForm.username"/>
+            </field>
+            <field
+                property="password"
+                depends="required,mask">
+                    <arg key="logonForm.password"/>
+                    <var>
+                        <var-name>mask</var-name>
+                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                    </var>
+            </field>
+        </form>
+
+   </formset>
+   <!-- ConfigEntBean-->
+
+    <formset>
+        <form name="ConfigEntBean">
+            <field
+                property="orgname"
+                depends="required">
+                    <arg key="ConfigEntBean.orgname"/>
+            </field>
+            <field
+                property="orgadd"
+                depends="required">
+                    <arg key="ConfigEntBean.orgadd"/>
+            </field>
+            <field
+                property="country"
+                depends="required">
+                    <arg key="ConfigEntBean.country"/>
+            </field>
+            <field
+                property="state"
+                depends="required">
+                    <arg key="ConfigEntBean.state"/>
+            </field>
+            <field
+                property="city"
+                depends="required">
+                    <arg key="ConfigEntBean.city"/>
+            </field>
+            <field
+                property="pcode"
+                depends="required">
+                    <arg key="ConfigEntBean.pcode"/>
+            </field>
+            <field
+                property="phone1"
+                depends="required">
+                    <arg key="ConfigEntBean.phone1"/>
+            </field>
+            <field
+                property="phone2"
+                depends="required">
+                    <arg key="ConfigEntBean.phone2"/>
+            </field>
+            <field
+                property="fax"
+                depends="required">
+                    <arg key="ConfigEntBean.fax"/>
+            </field>
+            <field
+                property="mail"
+                depends="required">
+                    <arg key="ConfigEntBean.mail"/>
+            </field>
+            
+        </form>
+    </formset>
+
+<!--  ConfigRoleBean   -->
+
+    <formset>
+        <form name="ConfigRoleBean">
+            <field
+                property="rolename"
+                depends="required">
+                    <arg key="ConfigRoleBean.rolename"/>
+            </field>
+            <field
+                property="roledesc"
+                depends="required">
+                    <arg key="ConfigRoleBean.roledesc"/>
+            </field>
+            <field
+                property="orgid"
+                depends="required">
+                    <arg key="ConfigRoleBean.orgid"/>
+            </field>
+        </form>
+    </formset>
+
+<!--   ConfigEmpBean   -->
+<!--    Config Supp Bean     -->
+
+<formset>
+        <form name="ConfigSupBean">
+            <field
+                property="sname"
+                depends="required">
+                    <arg key="ConfigSupBean.sname"/>
+            </field>
+            <field
+                property="status"
+                depends="required">
+                    <arg key="ConfigSupBean.status"/>
+            </field>
+        </form>
+    </formset>
+
+    <formset>
+        <form name="AddContactBean">
+            <field
+                property="supid"
+                depends="required">
+                    <arg key="AddContactBean.supid"/>
+            </field>
+            <field
+                property="sal"
+                depends="required">
+                    <arg key="AddContactBean.sal"/>
+            </field>
+            <field
+                property="fname"
+                depends="required">
+                    <arg key="AddContactBean.fname"/>
+            </field>
+            <field
+                property="lname"
+                depends="required">
+                    <arg key="AddContactBean.lname"/>
+            </field>
+            <field
+                property="function"
+                depends="required">
+                    <arg key="AddContactBean.function"/>
+            </field>
+            <field
+                property="phone"
+                depends="required">
+                    <arg key="AddContactBean.phone"/>
+            </field>
+            <field
+                property="email"
+                depends="required">
+                    <arg key="AddContactBean.email"/>
+            </field>
+            <field
+                property="tc"
+                depends="required">
+                    <arg key="AddContactBean.tc"/>
+            </field>
+        </form>
+    </formset>
+
+
+
+</form-validation>

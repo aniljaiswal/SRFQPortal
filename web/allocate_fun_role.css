@@ -1,0 +1,22 @@
+/*body{
+    background-image: url(bg.jpg);
+}*/
+#afrole_tb1{
+    background-color:lightsteelblue;
+    font-family: 'arial';
+    border-bottom-style: solid;
+    border-color: #003366;
+}
+#afrole_heading1{
+    background-image: url(bg_menu.jpg);
+    color:whitesmoke;
+    text-indent: 2%;
+}
+.list{
+    width:250px;
+    height:300px;
+}
+.sub_role{
+    width:80px;
+    height:35px;
+}

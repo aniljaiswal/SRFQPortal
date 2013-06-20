@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.SupplierQuatationMaster" table="supplier_quatation_master" catalog="srfq">
+        <id name="suppQuatationId" type="string">
+            <column name="Supp_Quatation_Id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="currencyMaster" class="classes.CurrencyMaster" fetch="select">
+            <column name="Currency_Id" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="requirementMaster" class="classes.RequirementMaster" fetch="select">
+            <column name="Req_id" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="supplierMaster" class="classes.SupplierMaster" fetch="select">
+            <column name="Supp_id" length="10" not-null="true" />
+        </many-to-one>
+        <many-to-one name="unitMeasureMaster" class="classes.UnitMeasureMaster" fetch="select">
+            <column name="Unit_id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="proposedcost" type="string">
+            <column name="Proposedcost" length="45" not-null="true" />
+        </property>
+        <property name="techSpecification" type="string">
+            <column name="Tech_Specification" length="45" not-null="true" />
+        </property>
+        <property name="remarks" type="string">
+            <column name="Remarks" length="45" not-null="true" />
+        </property>
+        <property name="techFeedbackStatus" type="string">
+            <column name="Tech_Feedback_status" length="8" not-null="true" />
+        </property>
+        <property name="financFeedbackStatus" type="string">
+            <column name="Financ_Feedback_status" length="8" not-null="true" />
+        </property>
+        <set name="sampleProductionApprovals" inverse="true">
+            <key>
+                <column name="Supp_Quatation_Id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.SampleProductionApproval" />
+        </set>
+        <set name="financialFeedbackMasters" inverse="true">
+            <key>
+                <column name="Supp_Quatation_Id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.FinancialFeedbackMaster" />
+        </set>
+        <set name="sampleAdminApprovals" inverse="true">
+            <key>
+                <column name="Supp_Quatation_Id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.SampleAdminApproval" />
+        </set>
+        <set name="sampleTechApprovals" inverse="true">
+            <key>
+                <column name="Supp_Quatation_Id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.SampleTechApproval" />
+        </set>
+        <set name="sampleFinancialApprovals" inverse="true">
+            <key>
+                <column name="Supp_Quatation_Id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.SampleFinancialApproval" />
+        </set>
+        <set name="technicalFeedbackMasters" inverse="true">
+            <key>
+                <column name="Supp_Quatation_Id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.TechnicalFeedbackMaster" />
+        </set>
+        <set name="sampleAdminRequests" inverse="true">
+            <key>
+                <column name="Supp_Quatation_Id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.SampleAdminRequest" />
+        </set>
+    </class>
+</hibernate-mapping>

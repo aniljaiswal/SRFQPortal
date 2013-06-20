@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.SupplierContactMaster" table="supplier_contact_master" catalog="srfq">
+        <id name="contactPersonId" type="string">
+            <column name="Contact_person_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="salutaionMaster" class="classes.SalutaionMaster" fetch="select">
+            <column name="Salutation_id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="suppId" type="string">
+            <column name="Supp_id" length="10" not-null="true" />
+        </property>
+        <property name="contactPersonFname" type="string">
+            <column name="Contact_person_fname" length="30" not-null="true" />
+        </property>
+        <property name="contactPersonLname" type="string">
+            <column name="Contact_person_lname" length="30" not-null="true" />
+        </property>
+        <property name="contactPersonFunction" type="string">
+            <column name="Contact_person_function" length="30" not-null="true" />
+        </property>
+        <property name="contactPersonPhone" type="int">
+            <column name="Contact_person_phone" not-null="true" />
+        </property>
+        <property name="contactPersonEmail" type="string">
+            <column name="Contact_person_email" length="50" not-null="true" />
+        </property>
+        <property name="termsandcondition" type="string">
+            <column name="termsandcondition" length="60" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Nov 14, 2011 2:32:05 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="classes.EmployeeMaster" table="employee_master" catalog="srfq">
+        <id name="empId" type="string">
+            <column name="Emp_id" length="10" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="statusMaster" class="classes.StatusMaster" fetch="select">
+            <column name="Status_Id" length="10" not-null="true" />
+        </many-to-one>
+        <property name="empFname" type="string">
+            <column name="Emp_Fname" length="45" not-null="true" />
+        </property>
+        <property name="empLname" type="string">
+            <column name="Emp_Lname" length="45" not-null="true" />
+        </property>
+        <property name="currenStreetAddress" type="string">
+            <column name="Curren_Street_Address" length="45" not-null="true" />
+        </property>
+        <property name="currentCity" type="string">
+            <column name="Current_City" length="30" not-null="true" />
+        </property>
+        <property name="currentState" type="string">
+            <column name="Current_State" length="30" not-null="true" />
+        </property>
+        <property name="currentZipcode" type="string">
+            <column name="Current_Zipcode" length="10" not-null="true" />
+        </property>
+        <property name="currentCountry" type="string">
+            <column name="Current_Country" length="30" not-null="true" />
+        </property>
+        <property name="currentPhone1" type="string">
+            <column name="Current_Phone1" length="13" not-null="true" />
+        </property>
+        <property name="currentPhone2" type="string">
+            <column name="Current_Phone2" length="13" not-null="true" />
+        </property>
+        <property name="currentMob" type="string">
+            <column name="Current_Mob" length="13" not-null="true" />
+        </property>
+        <property name="currentFax" type="string">
+            <column name="Current_Fax" length="13" not-null="true" />
+        </property>
+        <property name="permStreetAddress" type="string">
+            <column name="Perm_Street_Address" length="45" not-null="true" />
+        </property>
+        <property name="permCity" type="string">
+            <column name="Perm_City" length="30" not-null="true" />
+        </property>
+        <property name="permState" type="string">
+            <column name="Perm_State" length="30" not-null="true" />
+        </property>
+        <property name="permZipcode" type="string">
+            <column name="Perm_Zipcode" length="10" not-null="true" />
+        </property>
+        <property name="permCountry" type="string">
+            <column name="Perm_Country" length="30" not-null="true" />
+        </property>
+        <property name="permPhone1" type="string">
+            <column name="Perm_Phone1" length="13" not-null="true" />
+        </property>
+        <property name="permPhone2" type="string">
+            <column name="Perm_Phone2" length="13" not-null="true" />
+        </property>
+        <property name="permMob" type="string">
+            <column name="Perm_Mob" length="13" not-null="true" />
+        </property>
+        <property name="permFax" type="string">
+            <column name="Perm_Fax" length="13" not-null="true" />
+        </property>
+        <property name="emailId" type="string">
+            <column name="Email_Id" length="45" not-null="true" />
+        </property>
+        <property name="dateOfJoining" type="date">
+            <column name="Date_Of_Joining" length="10" not-null="true" />
+        </property>
+        <property name="dateOfLeaving" type="date">
+            <column name="Date_Of_Leaving" length="10" not-null="true" />
+        </property>
+        <set name="userMasters" inverse="true">
+            <key>
+                <column name="Emp_id" length="10" not-null="true" />
+            </key>
+            <one-to-many class="classes.UserMaster" />
+        </set>
+        <set name="roleMasters" inverse="false" table="employee_role_map">
+            <key>
+                <column name="Emp_id" length="10" not-null="true" />
+            </key>
+            <many-to-many entity-name="classes.RoleMaster">
+                <column name="Role_id" length="10" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+   <definition name="welcome" path="/welcomeStruts.jsp">
+        <put name="h" value="/header.jsp"/>
+        <put name="m" value="/Main1.jsp"/>
+        <put name="c" value="/content.jsp"/>
+        <put name="cr" value="/container.jsp"/>
+        <put name="f" value="/Footer1.jsp"/>
+    </definition>
+
+    <definition name="home1" path="/Home.jsp">
+        <put name="h" value="/Header1.jsp"/>
+        <put name="sbm" value="/submenu.jsp"/>
+        <put name="m" value="/menu.jsp"/>
+        <put name="b" value="/Body.jsp"/>
+        <put name="f" value="/footer.jsp"/>
+    </definition>
+    <definition name="changepass"  extends ="home1">
+              <put name="b" value="/ChangePassword.jsp"/>
+            </definition>
+             <definition name="fin5"  extends ="home1">
+              <put name="b" value="/Admin_Approval.jsp"/>
+            </definition>
+     <definition name="configEntPage1" extends="home1">
+         <put name="b" value="/config_ent1.jsp"/>
+     </definition>
+      <definition name="sap" extends="home1">
+         <put name="b" value="/SampleAdminApproval.jsp"/>
+     </definition>
+      <definition name="gsap" extends="home1">
+         <put name="b" value="/GiveSampleApproval.jsp"/>
+     </definition>
+      <definition name="vsap" extends="home1">
+         <put name="b" value="/ViewSampleApprovals.jsp"/>
+     </definition>
+     <definition name="configEntPage2" extends="home1">
+         <put name="b" value="/config_ent2.jsp"/>
+     </definition>
+     <definition name="configEntPage3" extends="home1">
+         <put name="b" value="/config_ent3.jsp"/>
+     </definition>
+     <definition name="configRolePage" extends="home1">
+         <put name="b" value="/config_role.jsp"/>
+     </definition>
+     <definition name="configRolePage1" extends="home1">
+         <put name="b" value="/config_role1.jsp"/>
+     </definition>
+     <definition name="configRolePage2" extends="home1">
+         <put name="b" value="/config_role2.jsp"/>
+     </definition>
+     <definition name="configRolePage3" extends="home1">
+         <put name="b" value="/config_role3.jsp"/>
+     </definition>
+     <definition name="ConfigSupPage" extends="home1">
+          <put name="b" value="/config_sup.jsp"/>
+      </definition>
+      <definition name="ConfigSupPage1" extends="home1">
+          <put name="b" value="/config_sup1.jsp"/>
+      </definition>
+      <definition name="ConfigSupPage2" extends="home1">
+          <put name="b" value="/config_sup2.jsp"/>
+      </definition>
+      <definition name="ConfigSupPage3" extends="home1">
+          <put name="b" value="/config_sup3.jsp"/>
+      </definition>
+      <definition name="AddContactPage" extends="home1">
+          <put name="b" value="/add_sup_contact.jsp"/>
+      </definition>
+      <definition name="AddContactPage1" extends="home1">
+          <put name="b" value="/add_sup_contact1.jsp"/>
+      </definition>
+      <definition name="AddContactPage2" extends="home1">
+          <put name="b" value="/add_sup_contact2.jsp"/>
+      </definition>
+      <definition name="AddContactPage3" extends="home1">
+          <put name="b" value="/add_sup_contact3.jsp"/>
+      </definition>
+       <definition name="ViewPage" path="/view.jsp">
+        <put name="h" value="/header.jsp"/>
+         <put name="t" value="/topmenu.jsp"/>
+    </definition>
+    <definition name="configEntPage"  extends ="home1">
+       
+        <put name="b" value="/config_ent.jsp"/>
+        
+    </definition>
+     <definition name="configRolePage"  extends ="home1">
+       
+        <put name="b" value="/config_role.jsp"/>
+        
+    </definition>
+    <definition name="view1"  extends ="home1">
+       
+        <put name="b" value="/View_Sample_Technical_Feedback.jsp"/>
+        
+    </definition>
+          <definition name="view2"  extends ="home1">
+       
+        <put name="b" value="/view_sample_financial_feedback.jsp"/>
+        
+    </definition>
+    <definition name="view3"  extends ="home1">
+       
+        <put name="b" value="/view_sample_operational_feedback.jsp"/>
+        
+    </definition>
+    <definition name="view4"  extends ="home1">
+       
+        <put name="b" value="/Admin_Approval.jsp"/>
+        
+    </definition>
+    <definition name="view5"  extends ="home1">
+       
+        <put name="b" value="/view_rfq_status_and_compare.jsp"/>
+        
+    </definition>
+     <definition name="enter"  extends ="home1">
+       
+        <put name="b" value="/AdminEnterprise.jsp"/>
+        
+    </definition>
+    <definition name="AllocateEmp"  extends ="home1">
+       
+        <put name="b" value="/AllocateFuncEmp.jsp"/>
+        
+    </definition>
+    <definition name="AllocateRole"  extends ="home1">
+        
+        <put name="b" value="/AllocateFuncRole.jsp"/>
+        
+    </definition>
+    <!-- ===============Admin ============= -->      
+    <definition name="configEmpPage" extends="home1">
+         <put name="b" value="/config_emp.jsp"/>
+     </definition>
+     <definition name="configEmpPage1" extends="home1">
+         <put name="b" value="/config_emp1.jsp"/>
+     </definition>
+     <definition name="configEmpPage2" extends="home1">
+         <put name="b" value="/config_emp2.jsp"/>
+     </definition>
+     <definition name="configEmpPage3" extends="home1">
+         <put name="b" value="/config_emp3.jsp"/>
+     </definition>
+     <definition name="configEmpPage4" extends="home1">
+         <put name="b" value="/config_emp4.jsp"/>
+     </definition>
+      <definition name="changepass1" extends="home1">
+         <put name="b" value="/changepass.jsp"/>
+     </definition>
+      <definition name="bdm" extends="home1">
+         <put name="b" value="/BidDateManage.jsp"/>
+     </definition>
+     <definition name="nbdt" extends="home1">
+         <put name="b" value="/NewBidDate.jsp"/>
+     </definition>
+      <definition name="ebdt" extends="home1">
+         <put name="b" value="/SelectEditBidDate.jsp"/>
+     </definition>
+     <definition name="bdt" extends="home1">
+         <put name="b" value="/EditBid Date.jsp"/>
+     </definition>
+     <!-- =========================================-->
+<!---  Producation -->
+    <definition name="add" extends="home1">
+        <put name="b" value="/add_new_request.jsp"/>
+    </definition>
+    <definition name="refill" extends="home1">
+        <put name="b" value="/add_new_request.jsp"/>
+    </definition>
+    <definition name="vu" extends="home1">
+        <put name="b" value="/view_update_request.jsp"/>
+    </definition>
+        <definition name="spe" extends="home1">
+        <put name="b" value="/specification.jsp"/>
+    </definition>
+     <definition name="rqi" extends="home1">
+        <put name="b" value="/index1.jsp"/>
+    </definition>
+    <definition name="sdm" extends="home1">
+        <put name="b" value="/demand_sample.jsp"/>
+    </definition>
+     <definition name="feed" extends="home1">
+        <put name="b" value="/sample_feedback.jsp"/>
+    </definition>
+     <definition name="final" extends="home1">
+        <put name="b" value="/final_approval.jsp"/>
+    </definition>
+    <definition name="review" extends="home1">
+        <put name="b" value="/review_sampling.jsp"/>
+    </definition>
+    <!---Supplier -->
+    <definition name="anq" extends="home1">
+        <put name="b" value="/NewQuotation.jsp"/>
+    </definition>
+    <definition name="up" extends="home1">
+        <put name="b" value="/updateQuo.jsp"/>
+    </definition>
+    <definition name="er" extends="home1">
+        <put name="b" value="/error.jsp"/>
+    </definition>
+    <definition name="ri" extends="home1">
+        <put name="b" value="/right.jsp"/>
+    </definition>
+    <definition name="conf" extends="home1">
+        <put name="b" value="/Confirmation.jsp"/>
+    </definition>
+     <definition name="nev" extends="home1">
+        <put name="b" value="/new_evaluationdesc.jsp"/>
+    </definition>
+    <definition name="mev" extends="home1">
+        <put name="b" value="/evaluation_main.jsp"/>
+    </definition>
+     <definition name="su" extends="home1">
+        <put name="b" value="/submit.jsp"/>
+    </definition>
+    <!-- ==========tecnical=========-->
+    <definition name="suphi" extends="home1">
+        <put name="b" value="/viewfeedback.jsp"/>
+    </definition>
+    <definition name="techfeed" extends="home1">
+        <put name="b" value="/TechFeedbacks.jsp"/>
+    </definition>
+    <definition name="sf" extends="home1">
+        <put name="b" value="/SampleFeedback.jsp"/>
+    </definition>
+     <definition name="sa" extends="home1">
+        <put name="b" value="/SampleTechApp.jsp"/>
+    </definition>
+    
+    <!-- -->
+    <!-- =======finacial ==== -->
+     <definition name="feedback" extends="home1">
+        <put name="b" value="/FinancialFeedbackonSupplier.jsp"/>
+    </definition>
+    <definition name="feeddue" extends="home1">
+        <put name="b" value="/FinancialFeedback.jsp"/>
+    </definition>
+    <definition name="iapp" extends="home1">
+        <put name="b" value="/InitialFinancialApprovalorRejection.jsp"/>
+    </definition>
+    <!-- ============= -->
+    
+</tiles-definitions>
